@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Photography Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .description {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .description h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .description p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Birthday Photography Portfolio</h1>
+        <p>Capturing joyful birthday celebrations, from kids to adults.</p>
+    </header>
+
+    <div class="container">
+        <div class="description">
+            <h2>Our Birthday Photography</h2>
+            <p>We love to capture the fun, joy, and excitement of birthdays. Explore our collection of birthday photography and see how we make every moment special.</p>
+        </div>
+
+        <div class="gallery">
+            <img src="images/bir01.jpg" alt="Birthday Image 1">
+            <img src="images/bir02.jpeg" alt="Birthday Image 2">
+            <img src="images/bir03.jpeg" alt="Birthday Image 3">
+            <img src="images/bir04.jpeg" alt="Birthday Image 4">
+            <img src="images/bir05.jpg" alt="Birthday Image 5">
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PhotoManager Pro. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

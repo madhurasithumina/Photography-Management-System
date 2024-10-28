@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Packages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+
+        .packages {
+            display: flex;
+            justify-content: space-between;
+            overflow-x: auto; /* Enables horizontal scrolling */
+            padding: 40px;
+        }
+
+        .package {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 280px;
+            flex: none; /* Ensure items don't shrink */
+            margin-right: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .package:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .package h2 {
+            margin-bottom: 10px;
+            color: #F49713;
+            font-size: 24px;
+        }
+
+        .package img {
+            width: 100%;
+            border-radius: 10px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 24px;
+            color: #444;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: left;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .packages {
+                justify-content: flex-start;
+            }
+
+            .package {
+                margin-right: 10px;
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Photography Packages</h1>
+        <p>Choose the perfect package for your special moments</p>
+    </header>
+
+    <section class="packages">
+        <div class="package">
+            <img src="images/wedding01.jpg" alt="Wedding Package">
+            <h2>Wedding Package</h2>
+            <p class="price">$1200</p>
+            <ul>
+                <li>Full-day coverage</li>
+                <li>Pre-wedding shoot</li>
+                <li>200 edited photos</li>
+                <li>High-resolution digital album</li>
+            </ul>
+        </div>
+
+        <div class="package">
+            <img src="images/port01.jpg" alt="Portrait Package">
+            <h2>Portrait Package</h2>
+            <p class="price">$300</p>
+            <ul>
+                <li>1-hour session</li>
+                <li>5 outfit changes</li>
+                <li>15 edited photos</li>
+                <li>High-resolution images</li>
+            </ul>
+        </div>
+
+        <div class="package">
+            <img src="images/indoor01.jpg" alt="Indoor Package">
+            <h2>Indoor Package</h2>
+            <p class="price">$500</p>
+            <ul>
+                <li>2-hour session</li>
+                <li>Studio setup</li>
+                <li>30 edited photos</li>
+                <li>High-resolution images</li>
+            </ul>
+        </div>
+
+        <div class="package">
+            <img src="images/bir03.jpeg" alt="Birthday Package">
+            <h2>Birthday Package</h2>
+            <p class="price">$600</p>
+            <ul>
+                <li>3-hour event coverage</li>
+                <li>50 edited photos</li>
+                <li>Group and candid shots</li>
+                <li>High-resolution digital album</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Photography Management System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

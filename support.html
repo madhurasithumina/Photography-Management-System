@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Admin Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .support-section {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .support-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            width: 48%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .support-box h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .support-box p {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .support-box a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5e57;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .support-box a:hover {
+            background-color: #ff3a30;
+        }
+
+        .faq {
+            margin-top: 50px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h4 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .faq-item p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .support-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .support-box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Admin Dashboard</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="admin_dashboard.html">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#support">Support</a></li>
+            <li><a href="admin_login.html">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Support</h2>
+    <div class="support-section">
+        <div class="support-box">
+            <h3>Need Help?</h3>
+            <p>If you're experiencing any issues or have questions, our support team is here to help. Please don't hesitate to reach out.</p>
+            <a href="mailto:support@photomaster.com">Contact Support</a>
+        </div>
+        <div class="support-box">
+            <h3>Submit a Ticket</h3>
+            <p>If you have a specific issue, you can submit a support ticket, and we'll get back to you as soon as possible.</p>
+            <a href="#">Submit Ticket</a>
+        </div>
+    </div>
+
+    <div class="faq">
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-item">
+            <h4>How do I reset my password?</h4>
+            <p>You can reset your password by going to the account settings and clicking on 'Reset Password'.</p>
+        </div>
+        <div class="faq-item">
+            <h4>How do I update my profile information?</h4>
+            <p>To update your profile information, navigate to the profile settings section and make the necessary changes.</p>
+        </div>
+        <div class="faq-item">
+            <h4>How do I manage user permissions?</h4>
+            <p>Go to the 'User Management' section in the dashboard to assign or modify user roles and permissions.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Photography Management System | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        /* Dropdown container styling */
+        .dropdown {
+            display: none;
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .sidebar ul li.active .dropdown {
+            display: block;
+        }
+
+        /* Additional CSS for the dropdown icon */
+        .sidebar ul li a i.fas.fa-chevron-down {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .dropdown li {
+            padding: 5px 0;
+        }
+
+        .dropdown li a {
+            font-size: 14px;
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .dropdown li a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+<div class="sidebar">
+    <h2>PhotoManager Pro</h2>
+    <ul>
+        <li><a href="admin_dashboard.html"><i class="fas fa-camera-retro"></i> Dashboard</a></li>
+        <li><a href="allbooking.php"><i class="fas fa-image"></i> Booking</a></li>
+
+        <!-- Portfolio with dropdown -->
+        <li class="portfolio-dropdown">
+            <a href="#"><i class="fas fa-users"></i> Portfolio <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown">
+                <li><a href="wedding.html">Wedding</a></li>
+                <li><a href="indoor.html">Indoor</a></li>
+                <li><a href="portrait.html">Portrait</a></li>
+                <li><a href="birthday.html">Birthdays</a></li>
+            </ul>
+        </li>
+
+        <!-- Updated Users section link -->
+        <li><a href="alluser.php"><i class="fas fa-check-circle"></i> Users</a></li>
+
+        <li><a href="support.html"><i class="fas fa-life-ring"></i> Support</a></li>
+        <li><a href="admin_login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+</div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Welcome, Admin</h1>
+            <div class="user-wrapper">
+                <img src="images/admin_avatar.png" alt="Admin" class="admin-avatar">
+                <div>
+                    <h4>Admin Name</h4>
+                    <small>Super Admin</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Overview Cards -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Photos</h3>
+                <p>3200</p>
+            </div>
+            <div class="card">
+                <h3>New Submissions</h3>
+                <p>150</p>
+            </div>
+            <div class="card">
+                <h3>Pending Approvals</h3>
+                <p>45</p>
+            </div>
+            <div class="card">
+                <h3>Photographers</h3>
+                <p>120</p>
+            </div>
+        </div>
+
+        <!-- Photo Submission Chart -->
+        <div class="charts">
+            <div class="chart-container">
+                <canvas id="photoSubmissionChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="approvalChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="recent-activity">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li>Photographer SarahS submitted a new portfolio</li>
+                <li>New photos from event "Nature Expo" approved</li>
+                <li>Support ticket #567 resolved</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Chart.js Scripts -->
+    <!-- <script src="dashboard.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Photo Submission Growth Chart
+        const photoSubmissionCtx = document.getElementById('photoSubmissionChart').getContext('2d');
+        const photoSubmissionChart = new Chart(photoSubmissionCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Photo Submissions',
+                    data: [200, 250, 300, 400, 450, 600],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Approval Chart
+        const approvalCtx = document.getElementById('approvalChart').getContext('2d');
+        const approvalChart = new Chart(approvalCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Approved', 'Pending', 'Rejected'],
+                datasets: [{
+                    label: 'Approval Status',
+                    data: [120, 30, 10],
+                    backgroundColor: ['#2ecc71', '#f1c40f', '#e74c3c']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Toggle dropdown functionality
+        document.querySelector('.portfolio-dropdown > a').addEventListener('click', function(event) {
+            event.preventDefault();
+            this.parentElement.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - PhotoMaster</title>
+    <style>
+        /* General Styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        #services-hero {
+            height: 60vh;
+            background: url('images/background.jpeg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+        }
+
+        /* Services Section */
+        #services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .service {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            width: 30%;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .service p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #services {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>PhotoMaster</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="insert_booking.php">Booking</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services-hero">
+        <div class="hero-content">
+            <h2>Our Photography Services</h2>
+            <p>Capturing every moment of your special day with expertise and creativity.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="service">
+            <h3>Wedding Photography</h3>
+            <p>We specialize in capturing every moment of your big day with stunning images.</p>
+        </div>
+        <div class="service">
+            <h3>Portrait Photography</h3>
+            <p>Professional portrait sessions tailored to your style and preferences.</p>
+        </div>
+        <div class="service">
+            <h3>Event Photography</h3>
+            <p>From corporate events to personal celebrations, we cover all types of events.</p>
+        </div>
+        <div class="service">
+            <h3>Product Photography</h3>
+            <p>High-quality photos that highlight the best features of your products.</p>
+        </div>
+        <div class="service">
+            <h3>Indoor & Studio Photography</h3>
+            <p>Perfect lighting and setups for a wide range of indoor photography styles.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PhotoMaster | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
